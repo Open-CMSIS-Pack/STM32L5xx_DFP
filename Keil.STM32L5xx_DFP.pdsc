@@ -17,6 +17,8 @@
     <release version="2.0.2-dev">
       Active development ...
       Updated documentation references
+      Package Description (pdsc):
+      - Shortened device family description
       Updated Templates:
       - Added DWARF-5 debug information
       - Added generated output files
@@ -89,8 +91,7 @@
     <family Dfamily="STM32L5 Series" Dvendor="STMicroelectronics:13">
       <processor Dcore="Cortex-M33" DcoreVersion="r0p0" Dfpu="SP_FPU" Dmpu="MPU" Ddsp="DSP" Dtz="TZ" Dendian="Little-endian" Dclock="110000000"/>
       <description>
-     The ARM Cortex-M33 is the most configurable of all Cortex-M processors.
-     It is a full featured microcontroller class processor based on the ARMv8-M mainline architecture with ARM TrustZone security.
+Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, TrustZone, 156 DMIPS at 110 MHz.
       </description>
       <book name="https://developer.arm.com/documentation/100235/latest/" title="Arm Cortex-M33 Devices"/>
       <book name="https://www.st.com/resource/en/reference_manual/rm0438-stm32l552xx-and-stm32l562xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf" title="STM32L552xx and STM32L562xx Reference Manual"/>
@@ -1122,6 +1123,7 @@
       </subFamily>
 
     </family>
+
   </devices>
 
   <conditions>
@@ -1152,7 +1154,6 @@
         <file category="doc" name="https://open-cmsis-pack.github.io/cmsis-toolbox/CubeMX"/>
       </files>
     </component>
-
   </components>
 
   <csolution>
@@ -1165,7 +1166,5 @@
     <template name="CubeMX TrustZone solution" path="Templates/CubeMX_TZ" file="CubeMX_TZ.csolution.yml" condition="STM32L5">
       <description>Create a CubeMX TrustZone solution with secure and non-secure projects</description>
     </template>
-
   </csolution>
-
 </package>
