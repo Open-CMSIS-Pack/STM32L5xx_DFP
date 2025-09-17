@@ -19,6 +19,7 @@
       Updated documentation references
       Package Description (pdsc):
       - Shortened device family description
+      - Corrected secure/non-secure memory description by applying attribute alias
       Updated Templates:
       - Added DWARF-5 debug information
       - Added generated output files
@@ -560,9 +561,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l552cc.pdf" title="STM32L552xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00040000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00040000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00040000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="48"/>
         </device>
@@ -575,9 +576,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l552cc.pdf" title="STM32L552xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="48"/>
         </device>
@@ -590,9 +591,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l552cc.pdf" title="STM32L552xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00040000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00040000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00040000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="48"/>
         </device>
@@ -605,9 +606,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l552cc.pdf" title="STM32L552xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="48"/>
         </device>
@@ -620,9 +621,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l552cc.pdf" title="STM32L552xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="48"/>
         </device>
@@ -635,9 +636,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l552cc.pdf" title="STM32L552xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="48"/>
         </device>
@@ -650,9 +651,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l552cc.pdf" title="STM32L552xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="CSP" n="81"/>
         </device>
@@ -665,9 +666,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l552cc.pdf" title="STM32L552xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="CSP" n="81"/>
         </device>
@@ -680,9 +681,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l552cc.pdf" title="STM32L552xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00040000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00040000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00040000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="BGA" n="132"/>
         </device>
@@ -695,9 +696,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l552cc.pdf" title="STM32L552xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="BGA" n="132"/>
         </device>
@@ -710,9 +711,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l552cc.pdf" title="STM32L552xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="BGA" n="132"/>
         </device>
@@ -725,9 +726,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l552cc.pdf" title="STM32L552xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="BGA" n="132"/>
         </device>
@@ -740,9 +741,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l552cc.pdf" title="STM32L552xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00040000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00040000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00040000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="64"/>
         </device>
@@ -755,9 +756,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l552cc.pdf" title="STM32L552xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="64"/>
         </device>
@@ -770,9 +771,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l552cc.pdf" title="STM32L552xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="64"/>
         </device>
@@ -785,9 +786,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l552cc.pdf" title="STM32L552xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="64"/>
         </device>
@@ -800,9 +801,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l552cc.pdf" title="STM32L552xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00040000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00040000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00040000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="100"/>
         </device>
@@ -815,9 +816,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l552cc.pdf" title="STM32L552xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="100"/>
         </device>
@@ -830,9 +831,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l552cc.pdf" title="STM32L552xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="100"/>
         </device>
@@ -845,9 +846,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l552cc.pdf" title="STM32L552xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00040000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00040000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00040000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="144"/>
         </device>
@@ -860,9 +861,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l552cc.pdf" title="STM32L552xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="144"/>
         </device>
@@ -875,9 +876,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l552cc.pdf" title="STM32L552xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="144"/>
         </device>
@@ -890,9 +891,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l562ce.pdf" title="STM32L562xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="48"/>
         </device>
@@ -905,9 +906,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l562ce.pdf" title="STM32L562xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="48"/>
         </device>
@@ -920,9 +921,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l562ce.pdf" title="STM32L562xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="48"/>
         </device>
@@ -935,9 +936,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l562ce.pdf" title="STM32L562xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="48"/>
         </device>
@@ -950,9 +951,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l562ce.pdf" title="STM32L562xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="CSP" n="81"/>
         </device>
@@ -965,9 +966,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l562ce.pdf" title="STM32L562xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="CSP" n="81"/>
         </device>
@@ -980,9 +981,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l562ce.pdf" title="STM32L562xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="BGA" n="132"/>
         </device>
@@ -994,9 +995,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l562ce.pdf" title="STM32L562xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="BGA" n="132"/>
         </device>
@@ -1009,9 +1010,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l562ce.pdf" title="STM32L562xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="BGA" n="132"/>
         </device>
@@ -1024,9 +1025,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l562ce.pdf" title="STM32L562xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="64"/>
         </device>
@@ -1039,9 +1040,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l562ce.pdf" title="STM32L562xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="64"/>
         </device>
@@ -1053,9 +1054,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l562ce.pdf" title="STM32L562xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="64"/>
         </device>
@@ -1068,9 +1069,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l562ce.pdf" title="STM32L562xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="100"/>
         </device>
@@ -1083,9 +1084,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l562ce.pdf" title="STM32L562xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="100"/>
         </device>
@@ -1098,9 +1099,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l562ce.pdf" title="STM32L562xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="144"/>
         </device>
@@ -1113,9 +1114,9 @@ Ultra-low-power STM32L5 MCUs with Arm Cortex-M33 core, MPU, cache, DSP, FPU, Tru
           <book name="https://www.st.com/resource/en/datasheet/stm32l562ce.pdf" title="STM32L562xx Data Sheet"/>
 
           <memory name="Flash-non-secure" access="rx"  start="0x08000000" size="0x00080000" default="1" startup="1" />
-          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" default="0" startup="1" />
+          <memory name="Flash-secure"     access="rx"  start="0x0C000000" size="0x00080000" alias="Flash-non-secure" />
           <memory name="SRAM-non-secure"  access="rwx" start="0x20000000" size="0x00040000" default="1" init="0" />
-          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" default="0" init="0" />
+          <memory name="SRAM-secure"      access="rwx" start="0x30000000" size="0x00040000" alias="SRAM-non-secure" />
 
           <feature type="QFP" n="144"/>
         </device>
